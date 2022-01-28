@@ -1,1 +1,1 @@
-fgbfdf
+alert('Привет'); alert('Мир');
