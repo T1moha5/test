@@ -1,15 +1,19 @@
-const os = require('os');
-const cluster = require('cluster');
+const Emitter = require('events');
 
-if(cluster.isMaster){
-    for(let i = 0; i < os.cpus().length; i++) {
-        cluster.fork()
-    }
+const emitter = new Emitter();
+
+emitter.on('message', (data, second, third) => {
+    console.log('message1', data);
+    console.log('message2', second);
+
+})
+
+
+const MESSAGE = process.env.message || '';
+
+if(MESSAGE){
+    emitter.emit('message', MESSAGE, 123)
 }else{
-    console.log('процесс с pid= ', process.pid, 'запущен')
-    setInterval(() => {
-
-    }, 5000)
+    emitter.emit('message', 'there isnt message', 'ddfd')
 }
-
 
