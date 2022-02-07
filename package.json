@@ -1,0 +1,25 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": " node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T1moha5/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T1moha5/test/issues"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "process": "^0.11.10"
+  },
+  "homepage": "https://github.com/T1moha5/test#readme"
+}
